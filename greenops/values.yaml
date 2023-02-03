@@ -25,7 +25,7 @@ common:
 
 server:
   name: greenops-server
-  image: docker.io/greenopsinc/goserver:v0.10.0
+  image: docker.io/greenopsinc/goserver:v0
   replicas: 1
   imagePullPolicy: Always
   restartPolicy: Always
@@ -34,7 +34,7 @@ server:
 
 controller:
   name: greenops-controller
-  image: docker.io/greenopsinc/controller:v0.10.0
+  image: docker.io/greenopsinc/controller:v1.134
   replicas: 1
   imagePullPolicy: Always
   restartPolicy: Always
@@ -44,7 +44,7 @@ controller:
 
 pipelineRepoServer:
   name: greenops-reposerver
-  image: docker.io/greenopsinc/pipelinereposerver:v0.10.0
+  image: docker.io/greenopsinc/pipelinereposerver:latest
   nodePort: 32522
   port: 8080
   replicas: 1
@@ -62,7 +62,7 @@ commandDelegator:
 
 metricsServer:
   name: greenops-metricsserver
-  image: docker.io/greenopsinc/greenops-metrics-server:v0.10.0
+  image: docker.io/greenopsinc/greenops-metrics-server:01.0
   nodePort: 32544
   port: 2112
   replicas: 1
