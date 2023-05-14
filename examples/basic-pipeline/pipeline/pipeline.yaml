@@ -4,6 +4,7 @@ metadata:
   generateName: hello-world-
 spec:
   entrypoint: whalesay
+  serviceAccountName: ac-cloud-build-greenops
   templates:
   - name: whalesay
     container:
